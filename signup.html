@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    
+<center><h1 style="font-size: 60px;">Sign In and get full acces to our Website</h1></center>
+
+<center>
+   <div class="div_sign_in">
+   <center> <h1>Login</h1> </center>
+<br><br><br>
+   <center><input id="name" style="width: 300px; height: 50px;text-align: center; font-size: 30px; border-radius: 10px; color:black   ; background-color: greenyellow;" type="text" placeholder="Name"></center>
+   <br><br><br>
+
+   <center><input id="password" style="width: 400px; height: 50px;text-align: center; font-size: 30px; border-radius: 10px; color:black   ; background-color: greenyellow;" type="password" placeholder="Enter your Password"></center>
+<br><br><br>
+   <center><input type="submit" onclick="signin();" style="width: 200px; height: 50px; background-color: palevioletred; border-radius: 10px; font-size: 20px;"></center>
+
+   </div>
+
+   <script>
+      var people = [
+    {
+        name: "Eklavya",
+        password: "eklavyajain"
+    },
+    {
+        username: "Cris",
+        password: "crismgupta"
+    }
+];
+
+function signin(){
+
+var name = document.getElementById("name").value
+var password = document.getElementById("password").value
+
+    for(i = 0; i < people.length; i++){
+        if(name == people[i].name && password == people[i].password){
+window.location.href = "app.html",
+console.log( name +  "You are Loged In");
+alert('VALID, Logging In!')
+        }
+        if(name != people[i].name && password != people[i].password){
+            alert('Inccorect Password Enterd! Try Again')
+        }
+}
+    }
+
+   </script>
+
+</center>
